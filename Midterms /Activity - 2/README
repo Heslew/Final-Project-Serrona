@@ -1,44 +1,70 @@
-Laboratory Activity #2 – Working with Analog Signals
+Laboratory Activity #1 – Working with Digital Signals
+
 
 Description
-This laboratory activity introduces the concept of analog signals and their use in an Arduino-based circuit.
 
-It extends the digital running light pattern from Laboratory Activity #1 by adding analog output control to adjust LED brightness levels.
+---------------------------------------------------------------------
 
-The activity illustrates how analog values can represent varying signal intensities and how these values are applied to control hardware components such as LEDs.
+* This laboratory activity demonstrates Arduino digital output 
+control for IoT systems, focusing on digital signal manipulation. 
+Five LEDs create a running light effect, sequentially lighting up 
+from pins 8→12 then turning off 12→8, visualizing HIGH/LOW state 
+transitions with
+1-second delays.
+
+---------------------------------------------------------------------
+
 
 Objectives
-Discuss analog signals and their implementation in an Arduino circuit.
 
-Understand analog-to-digital signal conversion and scaling concepts.
+---------------------------------------------------------------------
+
+* Implement Arduino digital outputs for IoT component control
+* Apply digital signal concepts (HIGH/LOW) in sequential LED patterns
+* Understand timing control for visual signal flow demonstration
+
+---------------------------------------------------------------------
 
 Concepts Applied
-Analog signal representation
 
-Pulse Width Modulation (PWM) using analogWrite()
+---------------------------------------------------------------------
 
-Use of arrays for pin management
+* Digital signal states (HIGH = 5V, LOW = 0V)
 
-Iterative control using while() loops
+* pinMode(pin, OUTPUT) configuration
 
-Sequential logic execution
+* digitalWrite(pin, HIGH/LOW) state control
 
-Timing control using delays
+* delay(ms) for timing synchronization
+
+* Sequential programming logic for chase effects
+
+* Breadboard prototyping with current-limiting resistors
+  
+---------------------------------------------------------------------
 
 System Behavior
-Five LEDs are connected to Arduino digital pins 8 to 12, with their pin numbers stored in an array for organized control.
 
-The program sequentially increases LED brightness from pin 12 down to pin 8 by setting each LED to the maximum analog value.
+---------------------------------------------------------------------
+* Five LEDs on digital pins 8, 9, 10, 11, 12 execute:
+* Forward sequence: Pin 8 HIGH → 9 HIGH → 10 HIGH → 11 HIGH → 12 HIGH (1s each)
+* Reverse sequence: Pin 8 LOW → 9 LOW → 10 LOW → 11 LOW → 12 LOW (1s each)
+* Continuous loop: 10-second full cycle repeats indefinitely
+* Visual effect: Left-to-right "running light" chase, then right-to-left extinguish.
+* Wiring: Arduino Uno pins → breadboard LEDs (colored wires: orange=8, yellow=9, green=10, blue=11, red=12) → 220Ω resistors → GND.
 
-After all LEDs are fully lit, the program sequentially decreases their brightness back to zero from pin 12 down to pin 8.
-
-The repeating sequence visually demonstrates how different analog output values change LED intensity and how arrays with loops simplify multi-LED control.
+---------------------------------------------------------------------
 
 Team Members
-Team Leader: Gito, Rhic Emmanuel
+
+---------------------------------------------------------------------
+
+Team Leader: Serrona, John Mark L.
 
 Members:
 
-Atas, Mikkos Cepie (Score: 99)
+Atas, Mikkos Cepie (Score: 100)
 
-Serrona, John Mark (Score: 100)
+Gito, Rhic Emmanuel (Score: 99)
+
+---------------------------------------------------------------------
