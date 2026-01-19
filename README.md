@@ -1,8 +1,7 @@
-# Final-Project-Serrona
+# Final-Project-Serrona-COSC111B
 
 --------------------------------------------------------------------------------------------------------------------------------------------
 
-FINAL PROJECT: For COSC111B
 This repository contains all laboratory activities and exams for COSC 111B – CS Elective 3 (Internet of Things).
 It showcases hands-on work with Arduino, Python, FastAPI, sensors, LEDs, and serial communication, from basic digital outputs to full IoT-style systems.
 
