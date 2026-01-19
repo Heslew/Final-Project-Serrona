@@ -1,12 +1,14 @@
-📌 Description
-════════════════════════════════════════════════════════════════════════════════════════════════
-This laboratory activity demonstrates Arduino digital output control for IoT systems, 
-focusing on digital signal manipulation. Five LEDs create a running light effect, 
-sequentially lighting up from pins 8→12 then turning off 12→8, visualizing 
-HIGH/LOW state transitions with 1-second delays.
-════════════════════════════════════════════════════════════════════════════════════════════════
+Description
+═════════════════════════════════════════════════════════════════════
+* This laboratory activity demonstrates Arduino digital output 
+control for IoT systems, focusing on digital signal manipulation. 
+Five LEDs create a running light effect, sequentially lighting up 
+from pins 8→12 then turning off 12→8, visualizing HIGH/LOW state 
+transitions with
+1-second delays.
 
-The setup establishes foundational IoT hardware control patterns applicable to your banana disease prediction system.
+═════════════════════════════════════════════════════════════════════
+
 
 🎯 Objectives
 Implement Arduino digital outputs for IoT component control
