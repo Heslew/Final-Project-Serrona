@@ -4,8 +4,7 @@ Description
 
 ---------------------------------------------------------------------
 
-* This laboratory activity demonstrates real-time, bidirectional control of an Arduino board using a FastAPI web server. The system lets both hardware inputs (push buttons) and HTTP requests from a web API toggle LED states on the Arduino, illustrating an IoT-style control architecture that combines physical interaction with remote software control.​
-
+* This Lab demonstrates an Arduino-to-Python client system where a push button on an Arduino remotely triggers actions on a separate LED system through a Python-based API client. The Arduino does not call the API directly; instead, it sends data over the serial port to a Python program, which then invokes a predefined HTTP endpoint and reports results on the terminal.
 ---------------------------------------------------------------------
 
 
@@ -13,9 +12,11 @@ Objectives
 
 ---------------------------------------------------------------------
 
-* Implement Arduino Serial communication for hardware control
-* Utilize Python and FastAPI to create HTTP endpoints for hardware interaction
-* Develop a bidirectional control system integrating physical buttons and web-based commands
+* Implement serial communication between Arduino and Python
+* Use a push button as an input device with proper software debouncing
+* Send a signal representing the group number from Arduino to Python
+* Trigger HTTP requests from Python to a remote API endpoint based on Arduino input
+* Provide clear feedback on API calls in the Python terminal
 
 
 ---------------------------------------------------------------------
@@ -24,47 +25,55 @@ Concepts Applied
 
 ---------------------------------------------------------------------
 
-* Serial communication between Arduino and Python.
-* Digital input handling with push buttons.
+* Digital input reading on Arduino using digitalRead().
 
-* Edge detection and state toggling logic.
+* Software debouncing to ensure reliable single detections per button press.
 
-* Digital output control for LEDs.
+* Serial communication between Arduino and Python for command passing.
 
-* HTTP server development using FastAPI.
+* Continuous serial listening in Python using the serial module.
 
-* Mapping web requests to serial commands.
+* HTTP requests in Python via the requests library.
 
-* Keeping LED states synchronized between hardware and software.
+* Case-insensitive input handling and normalization of received values.
 
+* Error handling and validation on both Arduino and Python sides.
 ---------------------------------------------------------------------
 
 System Behavior
 
 ---------------------------------------------------------------------
-* Hardware:
+* Components:
+
+                    An Arduino board with a push button wired as the primary input.
+                    
+                    A Python client on a computer that listens to the Arduino’s serial output.
+                    
+                    A remote LED API endpoint that toggles LEDs according to the received group number.
+
+* Workflow:
+
+          The user presses the button on the Arduino.
           
-          Three LEDs (Red, Green, Blue) connected to digital pins 5, 6, and 7.   
-          Three push buttons connected to digital pins 10, 11, and 12.
-
-* Arduino sketch:
-
-          Detects push button presses and toggles the corresponding LED states.
+          Arduino sends the assigned group number over Serial.
           
-          Parses serial commands from Python to toggle LEDs based on received characters.
-
-* FastAPI application:
-
-          Exposes REST endpoints for remote LED control:
+          The Python client reads and validates this serial input, then issues an HTTP request to /led/group/<group_number>/toggle.
           
-          /led/red, /led/green, /led/blue – toggle individual LEDs.
+* The Python client prints feedback including:
           
-          /led/on – turn all LEDs ON.
+          Group number received.
           
-          /led/off – turn all LEDs OFF.
+          Endpoint called.
+          
+          API response (success or error).
 
-* Communicates with Arduino over a serial connection, sending single-character commands mapped to each LED.
+* Rules:
 
+          One button press must correspond to exactly one API request.
+          
+          Long or held button presses must not generate repeated calls due to debouncing.
+          
+          All serial input must be checked
 
 ---------------------------------------------------------------------
 
