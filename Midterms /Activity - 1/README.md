@@ -19,9 +19,9 @@ Objectives
 
 ---------------------------------------------------------------------
 
-* Implement Arduino digital outputs for IoT component control
-* Apply digital signal concepts (HIGH/LOW) in sequential LED patterns
-* Understand timing control for visual signal flow demonstration
+* Review Arduino as a device for IoT systems implementation
+* Discuss digital signals and its implementation in a Arduino circuit.
+
 
 ---------------------------------------------------------------------
 
