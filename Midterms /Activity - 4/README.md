@@ -1,4 +1,4 @@
-Laboratory Activity #4 – Working with Analog Signals
+Laboratory Activity #4 – Arduino Serial Connection
 
 
 Description
