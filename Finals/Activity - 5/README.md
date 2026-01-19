@@ -70,13 +70,13 @@ Team Members
 
 ---------------------------------------------------------------------
 
-Team Leader: Lhojen Bonganay
+Team Leader:Bonganay, Lhojen Faith
 
 Members:
 
 Atas, Mikkos Cepie
 
-DelaCerna, Gabrielle
+Dela Cerna, Gabrielle
 
 Gito, Rhic Emmanuel
 
