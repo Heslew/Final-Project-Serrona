@@ -66,6 +66,4 @@ Final-Project-Serrona
 --------------------------------------------------------------------------------------------------------------------------------------------
 
 
-Refer to each lab’s README.md for detailed behavior, objectives, and system overview.
-
-Repository maintained as a student portfolio for COSC 111B (Internet of Things).
+Dont forget to view README.md for detailed information, objectives, and system overview.
