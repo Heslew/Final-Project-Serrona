@@ -14,11 +14,9 @@ Objectives
 
 ---------------------------------------------------------------------
 
-* Familiarize students with basic sensor components used in IoT.
-
-* Integrate multiple sensors into an Arduino circuit.
-
-* Implement a simple fire detection mechanism using sensor data
+*  Familiarize students with the basic sensor components that can be used in IoT
+*   Integrate these sensor components in an Arduino circuit
+*   Create a simple implementation of a fire sensor
 ---------------------------------------------------------------------
 
 Concepts Applied
