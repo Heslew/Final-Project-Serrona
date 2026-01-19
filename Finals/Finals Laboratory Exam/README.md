@@ -1,4 +1,4 @@
-Laboratory Activity #7 – Controlling Arduino Using FastAPI
+Finals Laboratory Exam  – Arduino-to-Python Client System
 
 Description
 
